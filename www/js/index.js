@@ -25,9 +25,5 @@ var onError = function(error) {
 };
 
 var initialize = function() {
-    // When the event `deviceready` is triggered,
-    // (when the Cordova functions have iniated)
-    // run the function `showReady`
-    
-    document.addEventListener('deviceready', whereAreWe, false);
+    whereAreWe();
 }
