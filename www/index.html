@@ -6,23 +6,65 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <title>More Rain</title>
+        <title>Late App</title>
     </head>
     <body>
-        <div id="loading">
-            <div id="spinner"></div>
+    	<div align="center" id="splash" class="app-window"> 
+    		<div align="center" style="width:200px;height:200px;border:1px solid blue;" >
+    			<a> <img src="splash.gif" alt=""> </a>
+    		</div>
+		</div>
+		<div align="center" id="landing" class="app-window"> 
+    		<div align="center" class="button excuse" data-category="nature" >
+    				<img src="button_nature.png" alt="">
+    		</div>
+    		</br>
+    		<div align="center" class="button excuse" data-category="traffic" >
+    				<img src="button_traffic.png" alt="">
+    		</div>
+    		</br>
+    		<div align="center" class="button excuse" data-category="household_health">
+    				<img src="button_household_health.png" alt="">
+    		</div>
+    		</br>
+    		<div align="center" class="button excuse" data-category="bizzare">
+    				<img src="button_nature.png" alt="">
+    		</div>
+		</div>
+		<div align="center" id="excuses" class="app-window">
+			<template id="nature-spam" class="spam-template">{A tree blocked the road | I have had train delay because of the snow | I have had train delay because of leafs on the rails | My goldfish died this morning | I needed to water the plants at my grandpa's place | A hole in the ground took away my bike | The rain has killed my laptop | I still have my watch set on winter time | I still have my watch set on summer time | I needed to walk because of the snow | I feel sick | Pigeons stole my bread | I have had an accident with a rabbit | I found a cat screaming for help | I was having morning sex | The wind was to hard, to windy to cycle | I locked myself outside | My bike was demolished by lightning | I am struck by lightning | A bird dropped a shit on my head | A cat jumped in-between my wheel so I crashed | I needed to feet my grandpas birds | My cat was having babys | My cat was puking | My little brother was sick | My cat pissed on my computer | My house burned down | I have had a fire in the kitchen | Somebody threw a brick trough my window and it demolished my laptop | My roof was leaking water on my computer | A mouse kept me out of sleep so I overslept} </template>
+        	<template id="traffic-spam" class="spam-template">Im {sorry|so sorry}, im running late {because of|due to|since there is} a traffic Jam on the {A1|A2|A3|A4} highway, {two cars crashed|a tuck tipped over|a motorcycle accident}
+|
+Im sorry, im late {because of|due to|since there were} a couple {cows|horses|zebras} that caused an accident with a {truck|bus|car}
+|
+Hello {boss.| |Alex.} I wanted to let you know i’m {hold up|late|not on time}. The bridge {stayed open for more then 10 min|got suck open and it took them 10 min to repair}
+|
+Sorry {boss.| |Alex.} im suck in a {major |}traffic jam, {they are constructing on Prinsessengracht|they are constructing on Prinsengracht|they are constructing on Elandgracht| there are constructions going on}.
+|
+The police is doing a alcohol test, and im running {10|20|30} minutes late. </template>
+			<template id="household_health-spam">{My grandfather/grandmother is ill I was required to take care of him/her
+|My brother/sister is ill I was required to take care of him/her|My Husband/wife was ill and I was required to take care of him/her
+|My girlfriend/boyfriend switched of the alarms clock|My boyfriend/girlfriend dumped me and i was too distracted and heartbroken
+|My spouse/child/roommate is too sick to get out of bed, so I've got to stay home and care for him/her|My relatives from really far away are visiting us|Had to get my kids/little sister/little broth at school|I was locked indoors by my kids/brother/sister/boyfriend/girlfriend/parents
+|My cousin went into labor, and I was the only person who lives close enough to get her to the hospital in time
+|Police mistakenly raided my house|Pipes at my house broke|I had pet emergency|I had a terrible food poisoning after a dinner party
+|I chipped a tooth and you now have to make an emergency dentist visit|My best best friend's potentially-violent boyfriend has kicked her out, and you've got to help her move – today!|I locked my keys in my car|I have caught a stomach virus|I got stung by a bee last night and had no idea I was allergic|I have got horrible hemorrhoids and your doctor advised you to soak for several hours in a salt water bath|I got a "reoccurring gynecological condition”|I got migraine|I have first degree burns in a cooking accident|I was a witness to a hit-and-run accident
+|Someone tried to burglarize my home last night, and I am getting a security system installed today|My car was repossessed last night, and I don't have any money for a taxi!} </template>
+</template>
+			<template id="bizzare-spam">{I super-glued my eye thinking it was contact solution|My hand got stuck in a candy machine|I was abducted by aliens. After being transported to the mother ship, the aliens decided not to suck out my brains. They sent me back home|My heat was shut off so I had to stay home to keep my snake warm|The line was too long at Starbucks|I wasn’t thinking and accidentally went to my old job|I was taking a telephone survey and lost track of the time|The bartender wouldn't let me leave|I saw Elvis|I was waiting for my deodorant to dry|I was trying to get my gun back from the police|I fell asleep in the shower|I couldn't find my clothes|I moonwalked out of town|You mean I have to show up to work everyday?
+} </template>
+            <pre></pre>
+ 			<div align="center" class="button" id="refresh-button">Refresh</div>
+ 			<div align="center" style="position:absolute;bottom:0;" class="button" id="back-button">back</div>
         </div>
-        <div id="results" class="hidden">
-            You are in {{ country }}. You should be happy to know that it rains even more often in Colombia.
-            <!-- Colombia is the country with the highest annual rainfall. But it would of corse be fun to add
-            more countries. We could use the data from the World Bank: http://data.worldbank.org/indicator/AG.LND.PRCP.MM -->
-        </div>
+
+		</div>
+		
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-        <script type="text/javascript" src="js/country_reverse_geocoding.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            initialize();
-        </script>
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/index.js"></script>
+		<script>
+			initialize();
+		</script>
     </body>
 </html>

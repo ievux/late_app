@@ -28,6 +28,17 @@ body > div {
     visibility: hidden;
 }
 
+.app-window {
+    width: 100%;
+}
+
+.button {
+	width: 200px;
+	height: 100px;
+	border: 1px solid blue;
+}
+
+
 #spinner { /* thks http://codepen.io/mgrubinger/pen/MYWQRx */
     height: 21px;
     width: 21px;
