@@ -47,6 +47,7 @@ var injectSpam = function(category) {
 }
 
 var initialize = function() {
+<<<<<<< HEAD
     // When the event `deviceready` is triggered,
     // (when the Cordova functions have iniated)
     // run the function `showReady`
@@ -76,4 +77,7 @@ var initialize = function() {
 		$("#excuses").hide();
 		$("#landing").show();
 	});
+=======
+    whereAreWe();
+>>>>>>> FETCH_HEAD
 }
